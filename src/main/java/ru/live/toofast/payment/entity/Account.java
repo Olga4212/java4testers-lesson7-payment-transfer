@@ -47,6 +47,6 @@ public class Account {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, balance);
+        return Objects.hash(id);
     }
 }

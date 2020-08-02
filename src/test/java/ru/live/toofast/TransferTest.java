@@ -7,14 +7,17 @@ import ru.live.toofast.payment.entity.Account;
 import ru.live.toofast.payment.model.MoneyTransferRequest;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.*;
 
 public class TransferTest {
 
-    Map<Long, Account> input = Map.of(1L, new Account(1L, 1_000_000L),
-            2L, new Account(2L, 1_000_000L));
+    Map<Long, Account> input = new HashMap<Long, Account>() {{
+        put(1L, new Account(1L, 1_000_000L));
+        put(2L, new Account(2L, 1_000_000L));
+    }};
 
     @Test
     public void simpleTest(){
